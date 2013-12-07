@@ -1,0 +1,38 @@
+<div class="header">
+  <h3 class="text-muted">gitleworkout</h3>
+</div>
+
+<div class="well">
+  <table class="table">
+    <thead>
+    <th>#</th>
+    <th>Date</th>
+    <th>Exercise</th>
+    <th>Set</th>
+    <th>Reps</th>
+    </thead>
+    <tbody>
+      <tr>
+        <form ng-submit="addEntry(data.entry)">
+        <td></td>
+          <td><input datepicker ng-model="data.entry.datetime" data-date-format="yyyy-mm-dd" id="startDate" class="form-control" size="16" type="text"</td>
+          <td><select class="form-control" type="text" ng-model="data.entry.exercise">
+            <option selected="selected">Push-ups</option>
+            <option>Sit-ups</option>
+            <option>Pull-ups</option>
+          </select></td>
+          <td><input class="form-control" type="number"ng-model="data.entry.sets"></td>
+          <td><input class="form-control" type="number"ng-model="data.entry.reps"></td>
+          <td><button class="btn btn-primary" type="submit">Submit</button></td>
+        </form>
+      </tr>
+      <tr ng-repeat="log in entries">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ log.datetime }}</td>
+        <td>{{ log.exercise }}</td>
+        <td>{{ log.sets }}</td>
+        <td>{{ log.reps }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
