@@ -4,7 +4,8 @@ var gitleworkoutApp = angular.module('gitleworkoutApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'firebase'
 ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -2,27 +2,30 @@
   <h3 class="text-muted">gitleworkout</h3>
 </div>
 
-<div class="well">
-  <table class="table">
+  <!--table class="table">
     <thead>
     <th>#</th>
     <th>Date</th>
     <th>Exercise</th>
-    <th>Set</th>
+    <th>Set 1</th>
+    <th>Set 2</th>
+    <th>Set 3</th>
+    <th>Set 4</th>
+    <th>Set 5</th>
     <th>Reps</th>
     </thead>
     <tbody>
       <tr>
         <form ng-submit="addEntry(data.entry)">
         <td></td>
-          <td><input datepicker ng-model="data.entry.datetime" data-date-format="yyyy-mm-dd" id="startDate" class="form-control" size="16" type="text"</td>
+          <td><input datepicker ng-model="data.entry.datetime" data-date-format="yyyy-mm-dd" id="startDate" class="form-control" size="16" type="text"></td>
           <td><select class="form-control" type="text" ng-model="data.entry.exercise">
             <option selected="selected">Push-ups</option>
             <option>Sit-ups</option>
             <option>Pull-ups</option>
           </select></td>
-          <td><input class="form-control" type="number"ng-model="data.entry.sets"></td>
-          <td><input class="form-control" type="number"ng-model="data.entry.reps"></td>
+          <td><input class="form-control" type="number"ng-model="data.entry.sets" placeholder="Reps"></td>
+          <td><input class="form-control" type="number"ng-model="data.entry.reps" placeholder="Reps"></td>
           <td><button class="btn btn-primary" type="submit">Submit</button></td>
         </form>
       </tr>
@@ -32,7 +35,64 @@
         <td>{{ log.exercise }}</td>
         <td>{{ log.sets }}</td>
         <td>{{ log.reps }}</td>
+        <td><span ng-click="removeEntry($index)" class="glyphicon glyphicon-trash"></span></td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>2013-12-08</td>
+        <td>Pull-ups</td>
+        <td>3</td>
+        <td>4</td>
+        <td>3</td>
+        <td>4</td>
+        <td>3</td>
+        <td>4</td>
+        <td><span ng-click="removeEntry($index)" class="glyphicon glyphicon-trash"></span></td>
       </tr>
     </tbody>
-  </table>
+  </table-->
+
+  <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
 </div>
