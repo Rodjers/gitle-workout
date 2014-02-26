@@ -12,9 +12,9 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/datepicker.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <!-- endbuild -->
 </head>
   <body ng-app="gitleworkoutApp" ng-controller="MainCtrl">
@@ -120,8 +120,7 @@
        ga('send', 'pageview');
     </script>
 
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+    
 
         <!-- build:js scripts/plugins.js -->
         <!--script src="bower_components/sass-bootstrap/js/affix.js"></script>
@@ -139,14 +138,17 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/modules.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+        <!--script src="https://cdn.firebase.com/v0/firebase.js"></script-->
+        <script src="bower_components/firebase/firebase.js"></script>
         <script src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
-
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        
+        <script src="bower_components/angularfire/angularfire.min.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -154,7 +156,6 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/bootstrap-datepicker.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <!-- endbuild -->
 </body>
 </html>

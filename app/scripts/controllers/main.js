@@ -1,74 +1,19 @@
 'use strict';
 
 angular.module('gitleworkoutApp')
-  .controller('MainCtrl', function ($scope, angularFire) {
+  .controller('MainCtrl', function ($scope, $firebase) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-    // $scope.entries = [
-    // {
-    // 	'date': '2013-12-08',
-    // 		'exercises': [
-    // 		{
-    // 			'name': 'Push-ups',
-    // 			'sets':[
-    // 			{'reps': 10},
-    // 			{'reps': 17},
-    // 			{'reps': 11},
-    // 			{'reps': 20}]
-    // 		},
-    // 		{
-    // 			'name': 'Sit-ups',
-    // 			'sets':[
-    // 			{'reps': 13},
-    // 			{'reps': 14},
-    // 			{'reps': 5},
-    // 			{'reps': 20}]
-    // 		}]
-    // },
-    // {
-    // 	'date': '2013-12-09',
-    // 		'exercises': [
-    // 		{
-    // 			'name': 'Push-ups',
-    // 			'sets':[
-    // 			{'reps': 13},
-    // 			{'reps': 14},
-    // 			{'reps': 17},
-    // 			{'reps': 20}]
-    // 		},
-    // 		{
-    // 			'name': 'Sit-ups',
-    // 			'sets':[
-    // 			{'reps': 18},
-    // 			{'reps': 13},
-    // 			{'reps': 8},
-    // 			{'reps': 19}]
-    // 		}]
-    // }];
 
-    $scope.entries = [];
+    
 
         var url = 'https://gitleworkout.firebaseio.com/log/workout/';
         var ref = new Firebase(url);
-        angularFire(ref, $scope, "entries")
-
-    // $scope.entries = [
-    // {
-    // 	'datetime': '2013-12-07',
-    // 	'exercise': 'Push-ups',
-    // 	'sets': 1,
-    // 	'reps': 10
-    // },
-    // {
-    // 	'datetime': '2013-12-07',
-    // 	'exercise': 'Push-ups',
-    // 	'sets': 2,
-    // 	'reps': 12
-    // }];
+        $scope.entries = $firebase(ref);
 
     
     $scope.addExercise = function(exercise, index){
